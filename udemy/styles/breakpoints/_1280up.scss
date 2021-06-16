@@ -1,0 +1,28 @@
+/******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+.travel {
+    &__texts,
+    &__img {
+        flex-basis: 47%;
+        
+    }
+    &__texts {
+        display: flex;
+        align-items: flex-end;
+    }
+    &__inner {
+        padding: 50px 150px;
+    }
+}
+.popular {
+    &__item {
+        flex-basis: 23%;
+    }
+}
+
+.side {
+    display: block;
+}

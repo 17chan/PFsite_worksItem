@@ -1,0 +1,265 @@
+html {
+  font-size: 62.5%;
+  font-family: inherit, "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.f-l, .nav-right h1, .header-text h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.f-xl {
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+
+.f-mb, .nav-left ul li, .course .item p, .contact p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.f-m, .header-text p, .about p {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.m-m, .nav-right, .nav-left, .header-text h1 {
+  margin: 16px auto;
+}
+
+.m-s, .course .item p {
+  margin: 4px auto;
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-right h1 {
+  text-align: center;
+}
+
+.nav-left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-left ul li {
+  text-align: center;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 72px;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  margin: 0 8px;
+}
+
+.header-text h1 {
+  margin-bottom: 16px;
+  line-height: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.header-text p {
+  line-height: 2rem;
+  letter-spacing: 0.16rem;
+}
+
+.header-image {
+  width: 100%;
+  height: 500px;
+  background-image: url(img/main-vsual-nontitle.png);
+  background-position: left;
+  background-size: cover;
+}
+
+main {
+  padding: 16px;
+}
+
+.container {
+  margin-bottom: 72px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about img {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.about p {
+  letter-spacing: 0.24rem;
+  line-height: 1.6rem;
+}
+
+.course .item {
+  margin-bottom: 20px;
+}
+
+.course .item img {
+  width: 100%;
+}
+
+.contact .item {
+  margin-bottom: 24px;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact input {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 8px 8px;
+  border: solid 2px gray;
+  border-radius: 30px;
+}
+
+.contact input:focus {
+  outline: none;
+}
+
+.contact button {
+  display: block;
+  width: 85%;
+  height: 48px;
+  margin: 0 auto;
+  background-color: #fa8383;
+  color: white;
+  font-size: 16px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact button:focus {
+  outline: none;
+}
+
+.contact button:hover {
+  background-color: #f78989;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .border {
+  width: 90%;
+  height: 0.5px;
+  margin: 16px auto;
+  background-color: #333;
+}
+
+footer p {
+  margin: 16px;
+}
+
+@media (min-width: 480px) {
+  .header-text {
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 960px) {
+  html {
+    font-size: 90%;
+  }
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav h1 {
+    font-size: 2rem;
+  }
+  .nav li {
+    margin: 0 16px;
+  }
+  .header-text {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  main {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .about-contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .about-contents img {
+    width: 48%;
+    height: auto;
+    margin-right: 4%;
+  }
+  .about-text {
+    width: 48%;
+  }
+  .course-contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .course-contents .item {
+    width: 28%;
+  }
+  .contact input {
+    width: 50%;
+    padding: 16px;
+  }
+  .contact button {
+    width: 35%;
+    height: 70px;
+    padding: 20px;
+    font-size: 1.6rem;
+  }
+  footer p {
+    margin: 16px auto;
+    width: 90%;
+    text-align: end;
+  }
+}
+/*# sourceMappingURL=style.css.map */

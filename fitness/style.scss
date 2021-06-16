@@ -1,0 +1,297 @@
+@import "styles/value";
+
+html, body, header, main, footer, h1, h2, h3, a, ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+}
+body {
+    width: 375px;
+    margin: 0 auto;
+}
+a:link, a:visited, a:hover, a:active {
+    color: $black;
+    background-color: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.bg-cover {
+    position: relative;
+    &::after {
+        content: '';
+        background-color: rgba($color: $black, $alpha: 0.5);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+  
+// ここから
+
+.container {
+    margin-bottom: 80px;
+}
+
+.bg {
+    height: 200px;
+    background-size: cover;
+    transform: scale(1.2) rotate(-5deg);
+    position: relative;
+    z-index: 1;
+}
+
+//header
+
+header {
+    position: relative;
+    height: 250px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.header-text {
+    color: $white;
+    position: absolute;
+    z-index: 2;
+    top: 130px;
+    left: 30px;
+}
+
+.menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+    div {
+        background-color: $white;
+        width: 40px;
+        height: 4px;
+        border-radius: 3px;
+        margin-bottom: 6px;
+    }
+}
+
+
+//main
+
+.news {
+    h1 {
+        color: $black;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .date {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .content {
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    ul {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        padding: 0;
+        width: 75%;
+
+        li {
+            margin-bottom: 24px;
+            border-bottom: dotted 2px $border;
+            div {
+                margin-bottom: 4px;
+            }
+            a {
+                transition: color 0.5s;
+                
+                &:hover {
+                    color: rgba($color: $black, $alpha: 0.6);  
+                }
+            }
+
+        }
+    }
+
+    .button {
+        @extend .btn;
+        transition: all 0.5s;
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+}
+
+.facility {
+    background-image: url(素材/facility.jpg);
+    height: 500px;
+    background-size:cover;
+    background-position:50%;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-color: rgba($color: $black, $alpha: 0.2);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    &-content {
+        margin: 0 auto;
+        width: 60%;
+        color: $white;
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        h1 {
+            letter-spacing: 2px;
+        }
+        p {
+            letter-spacing: 2px;
+            line-height: 24px;
+        }
+
+        .button {
+            @extend .btn;
+            transition: all 0.5s;
+            &:hover {
+                background-color: $white;
+                color: $black;
+                border: solid 1.2px $white;
+            }
+        }    
+    }
+}
+
+.recruit {
+    position: relative;
+    overflow: hidden;
+    a {
+        font-size: 20px;
+        color: $white;
+        text-align: center;
+        line-height: 120px;
+        display: block;
+        position: relative;
+        z-index: 2;
+        // background-color: royalblue;
+    }
+    .square {
+        width: 1000px;
+        height: 160px;
+        background-color: rgba($color: $black, $alpha: 0.07);
+        transform: rotate(-5deg) translateX(-500px) translateY(80px);
+        position: relative;
+    }
+
+    .content {
+        transform: translateY(-120px);
+        div {
+            position: relative;
+            margin: 20px auto;
+            width: 75%;
+            height: 120px;
+            &::after {
+                content: '';
+                background-color: rgba($color: $black, $alpha: 0.5);
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .regular {
+        background-image: url(素材/regular.jpg);
+        background-size: 150%;
+        background-position: 80% 20%;
+    }
+    .part {
+        background-image: url(素材/part.jpg);
+        background-size: 100%;
+    }
+
+}
+
+.contact {
+    background-image: url(素材/phone.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .button {
+        position: absolute;
+        z-index: 2;
+        @extend .btn;
+        padding: 20px 60px;
+        color: $white;
+        margin: 0 auto;
+        display: block;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: all 0.5s;
+        &:hover {
+            background-color: $white;
+            color: $black;
+            border: solid 1.2px $white;
+        }
+    }
+}
+
+footer {
+    h1 {
+        color: $black;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 32px;
+    }
+    .separate {
+        margin: 24px auto;
+        width: 95%;
+        height: 1.5px;
+        background-color: $black;
+    }
+    .adress {
+        letter-spacing: 2px;
+        text-align: center;
+        color: $black;
+        margin: 10px;
+    }
+    .copy-right {
+        display: block;
+        width: max-content;
+        margin: 30px auto;
+        margin-top: 56px;
+        color: rgba($color: $black, $alpha: 0.8);
+    }
+}
